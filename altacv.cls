@@ -355,9 +355,8 @@
     \textcolor{black!70}{\textbf{#2}}
 }
 
-\newcommand{\cvlist}[2]{%
-    \textcolor{accent!60}{\textmd{#1: }}
-    \textcolor{black!70}{\textmd{#2}}
+\newcommand{\cvlist}[1]{%
+    \textcolor{black!70}{\textmd{#1}}
 }
 
 \newcommand{\wheelchart}[4][0]{%
