@@ -1,0 +1,205 @@
+
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+\newenvironment{sloppypar*}{\sloppy\ignorespaces}{\par}
+
+% Page layout
+\geometry{left=1.2cm,right=1.2cm,top=1cm,bottom=1cm,columnsep=0.75cm}
+
+\usepackage{paracol}
+\usepackage{enumitem}
+\setlist{leftmargin=1.5em}
+
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{helvetica}
+  \setsansfont{helvetica}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+\ifdarkmode%
+  \definecolor{PrimaryColor}{HTML}{C69749}
+  \definecolor{SecondaryColor}{HTML}{D49B5}
+  \definecolor{ThirdColor}{HTML}{1877E8}
+  \definecolor{BodyColor}{HTML}{ABABAB}
+  \definecolor{EmphasisColor}{HTML}{ABABAB}
+  \definecolor{BackgroundColor}{HTML}{FFFFFF}
+\else%
+  \definecolor{PrimaryColor}{HTML}{001F5A}
+  \definecolor{SecondaryColor}{HTML}{0039AC}
+  \definecolor{ThirdColor}{HTML}{F3890B}
+  \definecolor{BodyColor}{HTML}{4c4c4c}
+  \definecolor{EmphasisColor}{HTML}{2E2E2E}
+  \definecolor{BackgroundColor}{HTML}{f4f4f4}
+\fi%
+
+\colorlet{name}{PrimaryColor}
+\colorlet{tagline}{SecondaryColor}
+\colorlet{heading}{PrimaryColor}
+\colorlet{headingrule}{ThirdColor}
+\colorlet{subheading}{SecondaryColor}
+\colorlet{accent}{SecondaryColor}
+\colorlet{emphasis}{EmphasisColor}
+\colorlet{body}{BodyColor}
+\pagecolor{BackgroundColor}
+
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\small\bfseries}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+\newcommand*\sepline{%
+  \begin{center}
+    \rule[1ex]{.5\textwidth}{.5pt}
+  \end{center}}
+
+\begin{document}
+    \name{Alexander Cannuli}
+    \tagline{Software Developer}
+    \photoL{4.5cm}{alex_logo small}
+    \personalinfo{
+        \email{mac42@sfu.ca}\email{alex.croft.cannuli@gmail.com}
+        \phone{(604)-313-5342}\\
+        \medskip
+        \location{North Vancouver, Canada}
+        \linkedin{alex-croft-cannuli}
+        \github{mononomori}
+        %\homepage{your_website}
+        % \gitlab{your_id}
+    }
+    \makecvheader
+    
+    \columnratio{0.25}
+    \begin{paracol}{2}
+        \begingroup
+        \vspace{4em}
+        % ----- SKILLS -----
+        \cvsection{Skills} 
+           \cvlang{Languages}{C\#, C/C++, Java, CSS/HTML, Nix}\\
+            \divider
+            \cvlang{Software}{Unity, Valve Hammer Editor, Photoshop, Lightroom}\\
+            \divider
+            \cvlang{OS}{Windows (7,10,11), Linux (NixOS, Mint, Ubuntu)}\\
+            \divider
+            \cvlang{Other}{Communicative, Adaptable, Level-headed, Task Management}\\
+            \bigskip
+        % ----- SKILLS -----
+        
+        % ----- INTERESTS -----
+        \cvsection{Interests}
+            \cvlang{Technical}{\\Video Games,\\Multimedia Processing,\\Glitch Art,\\Interactive Media,\\Software Art,\\Mechanical Keyboards,\\Retro-Technology}\\
+            \divider{}
+            \cvlang{Other}{\\Photography,\\Experimental Music,\\Science Fiction,\\Japanese Literature,\\Rock Climbing,\\Coffee}
+            \bigskip
+        % ----- INTERESTS ----- 
+        \endgroup
+    
+        \newpage
+        
+        \switchcolumn
+        
+        % ----- TECHNICAL PROJECTS -----
+        \vspace{-2em}
+        \cvsection{Technical Project Experience}
+            \cvschoolevent{harmonIQ}{Java, Springboot, and HTML/CSS}{May 2024 - Jul 2024 \hspace{1em} \cvreference{\faGithub \color{black!70}harmonIQ}{https://github.com/ChristianChidiac/harmonIQ/tree/main}}{SFU - Introduction to Software Engineering}
+            \vspace{-0.5em}
+            \begin{itemize}
+            \item Developed a full-stack CRUD application that generates music-based quizzes by aggregating users’ Spotify listening history.
+            \item Collaborated iteratively with team members through all stages of development, including planning, prototyping, implementation, and deployment.
+            \end{itemize}
+            \vspace{-0.5em}
+            \divider
+            \vspace{0.5em}
+            \cvschoolevent{Fast InvSqrt() Comparative Analysis}{C/C++ and X86-64 Assembly}{Jun 2023 -- Aug 2023}{SFU - Introduction to Computer Systems}
+            
+            \vspace{-0.5em}
+            \begin{itemize}
+            \item Composed a comprehensive comparative analysis of the famous InvSqrt() algorithm employed in Quake III, evaluating its runtime performance and assembly output against both contemporary C/C++ implementations and x86-64 assembly instructions.
+            \item Utilized Google's Benchmark library to conduct a detailed analysis of each functions CPU time and performance, quantifying individual assembly instruction's impact on resource utilization.
+            \end{itemize}
+            \vspace{-0.5em}
+            \divider
+            \vspace{0.5em}
+            \cvschoolevent{N-Tile Puzzle Game Solver}{Java}{Feb 2023 -- Apr 2023}{SFU - Data Structures and Programming}     
+            \vspace{-0.5em}
+            \begin{itemize}
+            \item Developed a Java-based solver for the n-tile puzzle game, employing an understanding of heuristic and path finding optimization techniques to achieve sub-1-minute solve times for up to 6x6 boards.
+            \item Evaluated the memory and CPU efficiency of various pathfinding algorithms, such as Dijkstra, A*, and IDA*, to find a balanced solution aligning with the project's requirements.
+            \end{itemize}
+        % ----- TECHNICAL PROJECTS -----
+        
+        % ----- PERSONAL PROJECTS -----
+        \vspace{-1em}
+        \cvsection{Personal Project Experience}
+            \cvevent{Lead Programmer - Video Game}{SugarHIGH - Unreal (Game Engine)}{March 2024 -- March 2024}{\cvreference{\faGlobe}{https://slurmsmckenzie.itch.io/sugarhigh} | \cvreference{\faGithub}{https://github.com/mononomori/SugarCube}}
+            \vspace{-0.5em}
+            \begin{itemize}
+            \item Served as Lead Programmer for a 3D puzzle-platformer, our entry in the Buddy Up Jam: Winter 2024.
+            \item Designed and implemented a custom physics-based movement system in Unreal Engine to enhance gameplay dynamics.
+            \end{itemize}
+            \vspace{-0.5em}
+            \divider
+            \vspace{0.5em}
+            \cvevent{Lead Programmer - Video Game}{Daikon Run - Unity (Game Engine)}{Dec 2023 -- Feb 2024}{}
+            \vspace{-0.5em}
+            \begin{itemize}
+            \item Led a two-person team in developing an original 2D side-scrolling auto-run game in Unity.
+            \end{itemize}
+        \end{paracol}
+        % ----- PERSONAL PROJECTS -----
+        \newpage
+
+        \makecvheader
+
+
+        \vspace{-2.5em}
+        % ----- WORK EXPERIENCE -----
+        \cvsection{Work Experience}
+            \cvlocationevent{Shift Supervisor}{49th Parallel Café (Lonsdale / Main Street)}{Nov 2019 -- Current}{North Vancouver / Vancouver, Canada}
+            \vspace{-0.5em}
+            \begin{itemize}
+            \item Supported the launch of the company's latest location, leveraging extensive company knowledge to assist in training a 10-person team during the opening phase.
+            \item Ensured stress-free floor operations during peak hours through proactive task delegation and attentive response to the needs of coworkers and customers.
+            \item Collaborated closely with management to analyze and address operational inefficiencies within cafe procedures and scheduling, resulting in improved workflow and reduced customer lead time.
+            \end{itemize}
+            \vspace{-0.5em}
+            \divider
+            \vspace{0.5em}
+            \cvlocationevent{Content Specialist}{ICUC - Marketing Services}{Sep 2014 -- Mar 2019}{Remote}
+            \vspace{-0.5em}
+            \begin{itemize}
+            \item Proactively addressed and resolved customer grievances and inquiries on public-facing social media accounts for various companies, delivering carefully crafted responses in line with brand identity.
+            \item Showcased the ability to multitask under pressure by concurrently monitoring several engagement channels while simultaneously addressing multiple open issues, ensuring prompt escalation-to-resolution times.
+            \end{itemize}
+        % ----- WORK EXPERIENCE -----
+
+        % ----- EDUCATION -----
+        \cvsection{Education}
+            \cvlocationevent{BSc - Computing Science}{Simon Fraser University}{Nov 2023 -- Ongoing}{BC, Canada}
+            \vspace{0.5em}
+            \cvlist{Relevant Courses}{\begin{itemize}
+                \item CMPT 361 - Introduction to Visual Computing
+                \item CMPT 363 - User Interface Design
+                \item CMPT 365 - Multimedia Systems
+                \item CMPT 263 - Introduction to Human-Centered Computing
+            \end{itemize}}
+            \divider
+            \vspace{0.5em}
+            \cvlocationevent{Certificate - Software Systems}{Vancouver Community College}{May 2021 - Aug 2022}{BC, Canada}
+            \vspace{0.5em}
+            \cvlist{Relevant Courses}{\begin{itemize}
+                \item CMPT 1020 - Introduction to Computer Programming 2
+                (foundational OOP Skills)
+                \item CMPT 1010 - Introduction to Computer Programming 1 (foundational C/C++ skills)
+            \end{itemize}}
+        % ----- EDUCATION -----
+        
+
+
+\end{document}
