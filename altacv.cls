@@ -291,7 +291,7 @@
   {\large\color{accent!70}#1}
   \ifstrequal{#2}{}{}{\large{\color{black!70} | #2}}
   \par\medskip\smallskip\normalsize
-  \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\color{accent}\faCalendar\color{black!70}~#3}}}
+  \ifstrequal{#3}{}{}{{\hspace{0.2em}\small\makebox[0.35\linewidth][l]{\color{accent}\faCalendar\color{black!70}~#3}}}
   \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\color{accent}\color{black!70}~#4}}}\par
   \medskip\normalsize
 }
@@ -300,7 +300,7 @@
   {\large\color{accent!70}#1}
   \ifstrequal{#2}{}{}{\large{\color{black!70} | #2}}
   \par\medskip\smallskip\normalsize
-  \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\color{accent}\faCalendar\color{black!70}~#3}}}
+  \ifstrequal{#3}{}{}{{\hspace{0.2em}\small\makebox[0.5\linewidth][l]{\color{accent}\faCalendar\color{black!70}~#3}}}
   \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\color{accent}\faMapMarker\color{black!70}~#4}}}\par
   \medskip\normalsize
 }
@@ -309,8 +309,8 @@
   {\large\color{accent!70}#1}
   \ifstrequal{#2}{}{}{\large{\color{black!70} | #2}}
   \par\medskip\smallskip\normalsize
-  \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\color{accent}\faCalendar\color{black!70}~#3}}}
-  \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\color{accent}\faBookOpen\color{black!70}~#4}}}\par
+  \ifstrequal{#3}{}{}{{\hspace{0.2em}\small\makebox[0.35\linewidth][l]{\color{accent}\faCalendar\color{black!70}~#3}}}
+  \ifstrequal{#4}{}{}{{\small\makebox[0.50\linewidth][l]{\color{accent}\faBookOpen\color{black!70}~#4}}}\par
   \medskip\normalsize
 }
 
@@ -318,6 +318,10 @@
 
 \newcommand{\cvreference}[2]{
   \textcolor{accent}{\href{#2}{#1}}
+}
+
+\newcommand{\cvtitlereference}[2]{
+  \textcolor{accent!70}{\href{#2}{#1}}
 }
 
 \newcommand{\cvachievement}[3]{%
